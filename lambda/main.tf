@@ -1,4 +1,4 @@
 module "http-redirect"{
     source = "./http-redirect"
-    count = 0
+    count = 1
 }
