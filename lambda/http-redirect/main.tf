@@ -20,3 +20,8 @@ resource "aws_lambda_function" "test_lambda_function" {
     handler       = "redirect.lambda_handler"
     timeout       = 10
 }
+
+resource "aws_lambda_function_url" "function" {
+    function_name      = aws_lambda_function.function.function_name
+    authorization_type = "NONE"
+}
