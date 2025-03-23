@@ -2,17 +2,17 @@
     Variables
 */
 
-variable "aws_access_key"  {}
-variable "aws_secret_key"  {}
-variable "aws_region"      {}
+variable "AWS_ACCESS_KEY_ID"  {}
+variable "AWS_SECRET_ACCESS_KEY"  {}
+variable "AWS_REGION"      {}
 
 /*
     keys
 */
 provider "aws" {
-  region  = var.aws_region
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  region  = var.AWS_REGION
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
 }
 
 /*
