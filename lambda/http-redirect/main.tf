@@ -10,8 +10,8 @@ data "archive_file" "python_lambda_package" {
 /*
   Create the lambda function
 */
-resource "aws_lambda_function" "test_lambda_function" {
-    function_name = "lambdaTest"
+resource "aws_lambda_function" "http_redirect" {
+    function_name = "httpRedirect"
     
     filename      = "http-redirect-lambda.zip"
     source_code_hash = data.archive_file.python_lambda_package.output_base64sha256
@@ -19,4 +19,9 @@ resource "aws_lambda_function" "test_lambda_function" {
     runtime       = "python3.8"
     handler       = "redirect.lambda_handler"
     timeout       = 10
+}
+
+resource "aws_lambda_function_url" "function" {
+    function_name      = aws_lambda_function.http_redirect.function_name
+    authorization_type = "NONE"
 }
