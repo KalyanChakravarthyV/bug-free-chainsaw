@@ -8,7 +8,7 @@ data "archive_file" "python_lambda_package" {
 }
 
 /*
-  Create the lamda function
+  Create the lambda function
 */
 resource "aws_lambda_function" "test_lambda_function" {
     function_name = "lambdaTest"
