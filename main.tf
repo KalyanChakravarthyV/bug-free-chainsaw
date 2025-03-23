@@ -3,6 +3,9 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "4.52.0"
+      region  = var.AWS_REGION
+      access_key = var.AWS_ACCESS_KEY_ID
+      secret_key = var.AWS_SECRET_ACCESS_KEY
     }
     random = {
       source  = "hashicorp/random"
@@ -20,17 +23,13 @@ terraform {
   }
 }
 
-variable "AWS_ACCESS_KEY_ID" {} 
-variable "AWS_REGION" {}
-variable "AWS_SECRET_ACCESS_KEY" {}
-
-
+/*
 provider "aws" {
   region  = var.AWS_REGION
   access_key = var.AWS_ACCESS_KEY_ID
   secret_key = var.AWS_SECRET_ACCESS_KEY
 }
-
+*/
 /*
     Modules
 */
