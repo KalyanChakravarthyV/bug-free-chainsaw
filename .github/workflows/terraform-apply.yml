@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  TF_CLOUD_ORGANIZATION: "KV_Terraform_Cleanup"
+  TF_CLOUD_ORGANIZATION: "KV_Terraform"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "learn-terraform-github-actions"
   CONFIG_DIRECTORY: "./"
