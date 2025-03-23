@@ -1,8 +1,7 @@
-import boto3
+# import boto3
 
 def lambda_handler(event, context):
-    result = "Hello World"
     return {
-        'statusCode' : 200,
-        'body': result
+        'statusCode' : 302,
+        'headers': {'Location': 'https://blog.vadlakonda.in'}
     }
