@@ -3,7 +3,7 @@ Archive the script
 */
 data "archive_file" "python_lambda_package" {
   type = "zip"
-  source_file = "${path.module}/python-code/redirect_lambda.py"
+  source_file = "${path.module}/python-code/redirect.py"
   output_path = "http-redirect-lambda.zip"
 }
 
